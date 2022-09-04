@@ -1,18 +1,11 @@
-import { QuoterForm } from "./components/QuoterForm"
+import { ContextProvider } from "./context/ContextProvider"
+import { QuoterPage } from "./view/QuoterPage"
 
 export const QuoterApp = () => {
 
   return (
-    <>
-      <header className="my-10">
-        <h1 className="text-white text-center text-4xl font-black">
-          Auto Insurance Quoter
-        </h1>
-      </header>
-
-      <main className="bg-white md:w-2/3 lg:w-2/4 mx-auto shadow rounded-lg p-10">
-        <QuoterForm />
-      </main>
-    </>
+    <ContextProvider>
+      <QuoterPage />
+    </ContextProvider>
   )
 }
